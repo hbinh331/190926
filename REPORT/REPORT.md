@@ -65,15 +65,15 @@ cat -v /usr/local/opnsense/scripts/helloworld/testConnection.py | head -n 1
 ## 3. Note lại một số kiến thức
 ### Kiến trúc MVC (Model, View, Controller):
 Là một kiến trúc quản lí mã nguồn. Mã nguồn được viết theo kiến trúc này sẽ chia làm 3 phần:
-- View: code giao diện tương tác với người dùng
-- Model: code xử lí dữ liệu, business logic
+- View: giao diện tương tác với người dùng
+- Model: xử lí dữ liệu, business logic
 - Controller: xử lí các request từ phần View, chuyển request đến phần Model để xử lí, sau đó trả lại kết quả từ Model cho View
 
 MVC trong OPNsense:  
 ![](image-2.png)
 ```
 Workflow:
-User gửi request -> lighttpd tiếp nhận request -> Routing lựa chọn Controller tương ứng -> Controller tương tác
+User gửi request -> lighttpd tiếp nhận request -> Routing lựa chọn Controller tương ứng -> Controller xử lí (thực hiện các action theo request, trả về giao diện html,...)
 ```
 ### 
 
