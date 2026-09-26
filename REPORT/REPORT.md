@@ -62,12 +62,13 @@ Có thể kiểm tra lại bằng lệnh:
 cat -v /usr/local/opnsense/scripts/helloworld/testConnection.py | head -n 1
 ```
 <i>Nếu màn hình in ra #!/usr/local/bin/python3 và không có kí tự ^M ở cuối dòng là thành công</i>
+
 ## 3. Note lại một số kiến thức
 ### Kiến trúc MVC (Model, View, Controller):
 Là một kiến trúc quản lí mã nguồn. Mã nguồn được viết theo kiến trúc này sẽ chia làm 3 phần:
 - View: giao diện tương tác với người dùng
-- Model: xử lí dữ liệu, business logic
-- Controller: xử lí các request từ phần View, chuyển request đến phần Model để xử lí, sau đó trả lại kết quả từ Model cho View
+- Model: xử lí dữ liệu
+- Controller: xử lí các request từ người dùng, chuyển request đến phần Model để xử lí, sau đó trả lại kết quả từ Model cho View
 
 MVC trong OPNsense:  
 ![](image-2.png)
@@ -75,5 +76,4 @@ MVC trong OPNsense:
 Workflow:
 User gửi request -> lighttpd tiếp nhận request -> Routing lựa chọn Controller tương ứng -> Controller xử lí (thực hiện các action theo request, trả về giao diện html,...)
 ```
-### 
 
